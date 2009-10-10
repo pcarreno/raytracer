@@ -1,0 +1,15 @@
+sphere { 
+  <2, 1, 4>, 
+  2 
+  pigment { 
+    color Green
+  } 
+}
+sphere { 
+  <-2, 1, 3>, 
+  7 
+  pigment { 
+    color Blue 
+  } 
+}
+
