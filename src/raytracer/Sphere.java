@@ -27,8 +27,8 @@ public class Sphere extends Object3D {
         double Aq= r.getDirection().dot(r.getDirection());
         double Bq = 2*r.getDirection().dot(new Vector3d(r.getOrigin().x-center.x,
                 r.getOrigin().y-center.y, r.getOrigin().z-center.z));
-        double Cq = Math.pow(r.getOrigin().x-center.x,2)+Math.pow(r.getOrigin().y-center.y,2)
-                + Math.pow(r.getOrigin().z-center.z,2)-Math.pow(radius, 2);
+        double Cq = (Math.pow(r.getOrigin().x-center.x,2)+Math.pow(r.getOrigin().y-center.y,2)
+                + Math.pow(r.getOrigin().z-center.z,2))-Math.pow(radius, 2);
         
         double discriminant = Math.pow(Bq,2)-(4*Aq*Cq);
          //Hay intersección, si se cumple esta condición... solo se ne
@@ -36,20 +36,15 @@ public class Sphere extends Object3D {
         if (discriminant >=0)
         {
            discriminant=Math.sqrt(discriminant);
-           double firstT=(-Bq-discriminant)*1/2;
-           if (firstT>range.minT && firstT<range.maxT)
-           {
-             retVal=true;
-             // se debe retornar T
-           }else
-           {
-               retVal= false;
-               // se debe retornar T
-           }
-        }else
-        {
-            // se de retornar T
-            retVal=false;
+           double firstT=(-Bq-discriminant)/(2*Aq);
+           if(firstT>range.minT && firstT<range.maxT)
+               {
+                   h.setColor(this.color);
+                   range.maxT=firstT;
+                   h.setT(firstT);
+                // se debe retornar T
+               }
+           retVal=true;
         }
         return retVal;
         

@@ -16,24 +16,30 @@ import javax.vecmath.*;
 
 public class Main {
 
-    int size = 500;
-	Group group = null;
+    int size = 300;
+	Group group = new Group();;
 	Image image = null;
 	Camera	camera = null;
 
-    	public void createScene(Vector <double []> temp) {
-		// Create a red sphere
-        group = new Group();
 
-        for (int i=0; i<temp.size()-1; i+=3){
+    	public void createScene(Vector <double []> temp, double ratio) {
+		// Create a red sphere
+         for (int i=0; i<temp.size(); i+=3){
            double [] temp0 = new double [3];
            double [] temp2 = new double [1];
            double [] temp3 = new double [3];
             temp0=temp.get(i);
             temp2=temp.get(i+1);
             temp3=temp.get(i+2);
-            Sphere s1 = new Sphere(new Point3d(temp0[0], temp0[1], temp0[2]), temp2[0],
-			new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]));
+            Sphere s1;
+            if(temp0[0]>1&&temp0[1]>1&&temp0[2]>1){
+            s1 = new Sphere(new Point3d(temp0[0]*ratio, temp0[1]*ratio, temp0[2]*ratio),
+            temp2[0]*ratio, new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]));
+            }else
+            {
+            s1 = new Sphere(new Point3d(temp0[0], temp0[1], temp0[2]),
+            temp2[0], new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]));
+            }
             group.add(s1);
         }
         /*Sphere s1 = new Sphere(new Point3d(0.5d, 0.5d, -0.5d), 0.3d,
@@ -62,28 +68,25 @@ public class Main {
             // El nombre del parser también comienza con el nombre del archivo
             RayTracerParser parser = new RayTracerParser(tokens);
             parser.scene();
-            m.createScene(parser.getVector());
+            double ratio=2/(double)m.size;
+            m.createScene(parser.getVector(), ratio);
 
             m.image = new Image(m.size, m.size);
             m.camera = new OrtographicCamera(1d);
 
-		// ToDo: For each pixel in the image,
-		// ask the camera to cast a ray
-		// then find if there are intersections of the
-		// ray with all objects in the scene
-		// Set the color of the image when necessary
-		for (int x = m.size/2; x < -m.size/2; x--) {
-            int right= x * (2/m.size);
-			for (int y = m.size/2; y < -m.size/2; y--) {
-				int up= y*(2/m.size);
+
+		for (int x = 0; x < m.size; x++) {
+            double right=(x*ratio)-1;
+			for (int y =0; y <m.size; y++) {
+				double up= (y*ratio)-1;
                Ray r= m.camera.generateRay(new Point2d(right,up));
                Hit h=new Hit();
                Range range = new Range();
                m.group.intersect(r, h, range);
-            }
-		// ToDo: Write the image at the end
-		// ...
+               m.image.setColor(x, y, h.getColor());
+              }
         }
+        m.image.writeImage();
     }
 
 

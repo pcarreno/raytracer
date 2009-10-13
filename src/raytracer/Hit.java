@@ -10,7 +10,7 @@ public class Hit {
 		// ToDo: initialize the value of t and
 		// the color
 		// ...
-        t = Double.MAX_VALUE;
+        t=Double.MAX_VALUE;
         color = new Color3f(0.f, 0.f, 0.f);
 	}
 	

@@ -466,7 +466,7 @@ public class RayTracerParser extends Parser {
                     }else if (color.equals("Red"))
                     { color1 [0] = 1.0; color1 [1] =0.0; color1 [2] = 0.0;
                     } else if (color.equals("Green"))
-                    {color1 [0] = 1.0; color1 [1] =1.0; color1 [2] = 0.0;
+                    {color1 [0] = 0.0; color1 [1] =1.0; color1 [2] = 0.0;
                     } else if (color.equals("White"))
                     {color1 [0] = 1.0; color1 [1] =1.0; color1 [2] = 1.0;}
             		 color = "";

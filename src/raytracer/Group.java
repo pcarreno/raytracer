@@ -14,12 +14,11 @@ public class Group extends Object3D {
 	}
 	
 	boolean intersect(Ray r, Hit h, Range range) {
-	 for (int j=0; j<vector.size()-1; j++)
-       {
-         vector.get(j).intersect(r, h, range);
-       }
 		boolean retVal = false;
-		// ...
+        for (int j=0; j<vector.size(); j++)
+       {
+         retVal=vector.get(j).intersect(r, h, range);
+       }
 		return retVal;
 	}
 

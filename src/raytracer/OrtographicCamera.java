@@ -10,13 +10,11 @@ public class OrtographicCamera extends Camera {
 	}
 	
 	public Ray generateRay(Point2d point) {
-		// ToDo: Generate the ray by
-		// providing a point and a vector
-        /**
-         *
-        * IMPLEMENTADO FALTA PROBAR
-         */
-		Ray ray = new Ray(new Point3d(point.x, point.y, 0), new Vector3d(0d, 0d, 1d));
+		double x = point.x;
+		double y = point.y;
+		Point3d punto = new Point3d(x, y, 0.0);
+		Vector3d vector = new Vector3d(0.0, 0.0, -1.0);
+		Ray ray = new Ray(punto, vector);
 		return ray;
 	}
 }
