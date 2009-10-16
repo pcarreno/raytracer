@@ -31,33 +31,16 @@ public class Main {
             temp0=temp.get(i);
             temp2=temp.get(i+1);
             temp3=temp.get(i+2);
-            Sphere s1;
-            if(temp0[0]>1&&temp0[1]>1&&temp0[2]>1){
-            s1 = new Sphere(new Point3d(temp0[0]*ratio, temp0[1]*ratio, temp0[2]*ratio),
-            temp2[0]*ratio, new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]));
-            }else
-            {
-            s1 = new Sphere(new Point3d(temp0[0], temp0[1], temp0[2]),
+            Sphere s1 = new Sphere(new Point3d(temp0[0], temp0[1], temp0[2]),
             temp2[0], new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]));
-            }
             group.add(s1);
         }
-        /*Sphere s1 = new Sphere(new Point3d(0.5d, 0.5d, -0.5d), 0.3d,
-				new Color3f(1f, 0f, 0f));
-		// Create a blue sphere
-		Sphere s2 = new Sphere(new Point3d(0.1d, 0.5d, -1.5d), 0.3d,
-				new Color3f(0f, 0f, 1f));
-		// Now create a group
-		group = new Group();
-		group.add(s1);
-		group.add(s2);*/
 	}
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
 
-	// TODO Auto-generated method stub
           Main m = new Main();
             CharStream input = new ANTLRFileStream("input.txt");
             // El nombre del lexer comienza con el nombre del archivo .g.

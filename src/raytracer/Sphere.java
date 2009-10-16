@@ -24,35 +24,27 @@ public class Sphere extends Object3D {
 	boolean intersect(Ray r, Hit h, Range range) {
 		// ToDo:
 		boolean retVal = false;
-        double Aq= r.getDirection().dot(r.getDirection());
-        double Bq = 2*r.getDirection().dot(new Vector3d(r.getOrigin().x-center.x,
-                r.getOrigin().y-center.y, r.getOrigin().z-center.z));
-        double Cq = (Math.pow(r.getOrigin().x-center.x,2)+Math.pow(r.getOrigin().y-center.y,2)
-                + Math.pow(r.getOrigin().z-center.z,2))-Math.pow(radius, 2);
-        
-        double discriminant = Math.pow(Bq,2)-(4*Aq*Cq);
+        Vector3d origenRayo = new Vector3d(r.getOrigin().x, r.getOrigin().y, r.getOrigin().z);
+        Vector3d origenEsfera= new Vector3d(this.center.x, this.center.y, this.center.z);
+        double Aq= 1;
+        double Bq = 2*(r.getDirection().dot(origenRayo)) - 2*(r.getDirection().dot(origenEsfera));
+        double Cq = origenRayo.dot(origenRayo) - 2*(origenRayo.dot(origenEsfera)) - Math.pow(this.radius,2) + origenEsfera.dot(origenEsfera);
+
+
+        double discriminant = Bq*Bq-(4*Aq*Cq);
          //Hay intersección, si se cumple esta condición... solo se ne
         // necesita el primer valor que es el de la primera intersección
         if (discriminant >=0)
         {
-           discriminant=Math.sqrt(discriminant);
-           double firstT=(-Bq-discriminant)/(2*Aq);
-           if(firstT>range.minT && firstT<range.maxT)
+           double firstT=(-Bq-Math.sqrt(discriminant))/(2*Aq);
+           if(firstT<h.getT())
                {
                    h.setColor(this.color);
-                   range.maxT=firstT;
                    h.setT(firstT);
                 // se debe retornar T
                }
            retVal=true;
         }
         return retVal;
-        
-        // Compute the intersection of the ray with the
-		// Sphere and update what needs to be updated
-		// Valid values for t must be within the "range"
-		
-		// ...
-	}
-	
+    }
 }

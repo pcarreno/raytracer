@@ -1,13 +1,13 @@
 sphere { 
-  <75, 75, -75>, 
-  45
+  <0.2, 0.5, -0.5>, 
+  0.3
   pigment { 
     color Blue 
   } 
 }
 sphere { 
-  <75, 30, -135>, 
-  45
+  <0.5, 0.2, -0.8>, 
+  0.2
   pigment { 
     color Red
   } 
