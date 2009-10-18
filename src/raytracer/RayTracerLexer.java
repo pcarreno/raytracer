@@ -2,37 +2,46 @@ package raytracer;
 
 // $ANTLR 3.1.2 D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g 2009-09-26 18:43:40
 
+
+
 import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
 public class RayTracerLexer extends Lexer {
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
     public static final int GREATER_THAN=16;
+    public static final int T__26=26;
     public static final int PIGMENT=14;
-    public static final int T__22=22;
-    public static final int T__21=21;
-    public static final int WHITESPACE=20;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int WHITESPACE=22;
     public static final int TYPE_COLOR=18;
     public static final int EOF=-1;
     public static final int COLOR=6;
     public static final int OPEN_BRACKET=5;
     public static final int PLANE=13;
     public static final int LOOK_AT=10;
-    public static final int NEWLINE=19;
     public static final int LIGHTSOURCE=4;
+    public static final int NEWLINE=21;
     public static final int CAMERA=8;
     public static final int COMMA=12;
+    public static final int AMBIENTLIGHT=20;
     public static final int LESS_THAN=15;
     public static final int LOCATION=9;
     public static final int DIGIT=17;
+    public static final int GLOBAL=19;
     public static final int SPHERE=11;
     public static final int CLOSE_BRACKET=7;
 
     // delegates
     // delegators
 
-    public RayTracerLexer() {;} 
+    public RayTracerLexer() {;}
     public RayTracerLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
@@ -40,17 +49,17 @@ public class RayTracerLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "RayTracer.g"; }
+    public String getGrammarFileName() { return "D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g"; }
 
-    // $ANTLR start "T__21"
-    public final void mT__21() throws RecognitionException {
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
         try {
-            int _type = T__21;
+            int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:3:7: ( '-' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:3:9: '-'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:3:7: ( '-' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:3:9: '-'
             {
-            match('-'); 
+            match('-');
 
             }
 
@@ -60,17 +69,17 @@ public class RayTracerLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__21"
+    // $ANTLR end "T__23"
 
-    // $ANTLR start "T__22"
-    public final void mT__22() throws RecognitionException {
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
         try {
-            int _type = T__22;
+            int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:4:7: ( '.' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:4:9: '.'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:4:7: ( '.' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:4:9: '.'
             {
-            match('.'); 
+            match('.');
 
             }
 
@@ -80,17 +89,164 @@ public class RayTracerLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__22"
+    // $ANTLR end "T__24"
+
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
+        try {
+            int _type = T__25;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:5:7: ( 'finish' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:5:9: 'finish'
+            {
+            match("finish");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:6:7: ( 'ambient' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:6:9: 'ambient'
+            {
+            match("ambient");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:7:7: ( 'diffuse' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:7:9: 'diffuse'
+            {
+            match("diffuse");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:8:7: ( 'specular' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:8:9: 'specular'
+            {
+            match("specular");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:9:7: ( 'brilliance' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:9:9: 'brilliance'
+            {
+            match("brilliance");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__29"
+
+    // $ANTLR start "AMBIENTLIGHT"
+    public final void mAMBIENTLIGHT() throws RecognitionException {
+        try {
+            int _type = AMBIENTLIGHT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:162:2: ( 'ambient_light' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:162:4: 'ambient_light'
+            {
+            match("ambient_light");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "AMBIENTLIGHT"
+
+    // $ANTLR start "GLOBAL"
+    public final void mGLOBAL() throws RecognitionException {
+        try {
+            int _type = GLOBAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:164:2: ( 'global_settings' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:164:4: 'global_settings'
+            {
+            match("global_settings");
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "GLOBAL"
 
     // $ANTLR start "LIGHTSOURCE"
     public final void mLIGHTSOURCE() throws RecognitionException {
         try {
             int _type = LIGHTSOURCE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:26:13: ( 'light_source' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:26:15: 'light_source'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:165:13: ( 'light_source' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:165:15: 'light_source'
             {
-            match("light_source"); 
+            match("light_source");
 
 
             }
@@ -108,10 +264,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = CAMERA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:27:9: ( 'camera' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:27:12: 'camera'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:166:9: ( 'camera' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:166:12: 'camera'
             {
-            match("camera"); 
+            match("camera");
 
 
             }
@@ -129,10 +285,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = LOCATION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:28:9: ( 'location' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:28:12: 'location'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:167:9: ( 'location' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:167:12: 'location'
             {
-            match("location"); 
+            match("location");
 
 
             }
@@ -150,10 +306,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = PIGMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:29:9: ( 'pigment' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:29:12: 'pigment'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:168:9: ( 'pigment' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:168:12: 'pigment'
             {
-            match("pigment"); 
+            match("pigment");
 
 
             }
@@ -171,10 +327,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = PLANE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:30:7: ( 'plane' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:30:10: 'plane'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:169:7: ( 'plane' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:169:10: 'plane'
             {
-            match("plane"); 
+            match("plane");
 
 
             }
@@ -192,10 +348,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = SPHERE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:31:8: ( 'sphere' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:31:11: 'sphere'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:170:8: ( 'sphere' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:170:11: 'sphere'
             {
-            match("sphere"); 
+            match("sphere");
 
 
             }
@@ -213,10 +369,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = LOOK_AT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:32:9: ( 'look_at' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:32:12: 'look_at'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:171:9: ( 'look_at' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:171:12: 'look_at'
             {
-            match("look_at"); 
+            match("look_at");
 
 
             }
@@ -234,10 +390,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = COLOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:33:7: ( 'color' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:33:10: 'color'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:172:7: ( 'color' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:172:10: 'color'
             {
-            match("color"); 
+            match("color");
 
 
             }
@@ -255,7 +411,7 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = TYPE_COLOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:35:2: ( 'Yellow' | 'Blue' | 'Red' | 'Green' | 'White' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:174:2: ( 'Yellow' | 'Blue' | 'Red' | 'Green' | 'White' )
             int alt1=5;
             switch ( input.LA(1) ) {
             case 'Y':
@@ -292,41 +448,41 @@ public class RayTracerLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:35:5: 'Yellow'
+                    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:174:5: 'Yellow'
                     {
-                    match("Yellow"); 
+                    match("Yellow");
 
 
                     }
                     break;
                 case 2 :
-                    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:35:14: 'Blue'
+                    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:175:5: 'Blue'
                     {
-                    match("Blue"); 
+                    match("Blue");
 
 
                     }
                     break;
                 case 3 :
-                    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:35:21: 'Red'
+                    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:176:5: 'Red'
                     {
-                    match("Red"); 
+                    match("Red");
 
 
                     }
                     break;
                 case 4 :
-                    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:35:27: 'Green'
+                    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:177:5: 'Green'
                     {
-                    match("Green"); 
+                    match("Green");
 
 
                     }
                     break;
                 case 5 :
-                    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:35:36: 'White'
+                    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:178:5: 'White'
                     {
-                    match("White"); 
+                    match("White");
 
 
                     }
@@ -346,10 +502,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = OPEN_BRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:36:13: ( '{' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:36:16: '{'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:179:13: ( '{' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:179:16: '{'
             {
-            match('{'); 
+            match('{');
 
             }
 
@@ -366,10 +522,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = CLOSE_BRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:37:14: ( '}' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:37:20: '}'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:180:14: ( '}' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:180:18: '}'
             {
-            match('}'); 
+            match('}');
 
             }
 
@@ -386,10 +542,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = LESS_THAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:39:2: ( '<' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:39:4: '<'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:182:2: ( '<' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:182:4: '<'
             {
-            match('<'); 
+            match('<');
 
             }
 
@@ -406,10 +562,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = GREATER_THAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:41:2: ( '>' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:41:4: '>'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:184:2: ( '>' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:184:4: '>'
             {
-            match('>'); 
+            match('>');
 
             }
 
@@ -426,10 +582,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:42:8: ( ',' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:42:10: ','
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:185:8: ( ',' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:185:10: ','
             {
-            match(','); 
+            match(',');
 
             }
 
@@ -446,10 +602,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = DIGIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:43:7: ( ( '0' .. '9' )+ )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:43:9: ( '0' .. '9' )+
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:186:7: ( ( '0' .. '9' )+ )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:186:9: ( '0' .. '9' )+
             {
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:43:9: ( '0' .. '9' )+
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:186:9: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -463,9 +619,9 @@ public class RayTracerLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:43:9: '0' .. '9'
+            	    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:186:9: '0' .. '9'
             	    {
-            	    matchRange('0','9'); 
+            	    matchRange('0','9');
 
             	    }
             	    break;
@@ -495,10 +651,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:44:9: ( ( '\\r' )? '\\n' )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:44:11: ( '\\r' )? '\\n'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:187:9: ( ( '\\r' )? '\\n' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:187:11: ( '\\r' )? '\\n'
             {
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:44:11: ( '\\r' )?
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:187:11: ( '\\r' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -507,16 +663,16 @@ public class RayTracerLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:44:11: '\\r'
+                    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:187:11: '\\r'
                     {
-                    match('\r'); 
+                    match('\r');
 
                     }
                     break;
 
             }
 
-            match('\n'); 
+            match('\n');
             skip();
 
             }
@@ -534,10 +690,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = WHITESPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:45:14: ( ( ' ' | '\\t' )+ )
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:45:19: ( ' ' | '\\t' )+
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:188:11: ( ( ' ' | '\\t' )+ )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:188:16: ( ' ' | '\\t' )+
             {
-            // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:45:19: ( ' ' | '\\t' )+
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:188:16: ( ' ' | '\\t' )+
             int cnt4=0;
             loop4:
             do {
@@ -551,7 +707,7 @@ public class RayTracerLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:
+            	    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:
             	    {
             	    if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -588,140 +744,189 @@ public class RayTracerLexer extends Lexer {
     // $ANTLR end "WHITESPACE"
 
     public void mTokens() throws RecognitionException {
-        // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:8: ( T__21 | T__22 | LIGHTSOURCE | CAMERA | LOCATION | PIGMENT | PLANE | SPHERE | LOOK_AT | COLOR | TYPE_COLOR | OPEN_BRACKET | CLOSE_BRACKET | LESS_THAN | GREATER_THAN | COMMA | DIGIT | NEWLINE | WHITESPACE )
-        int alt5=19;
+        // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:8: ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | AMBIENTLIGHT | GLOBAL | LIGHTSOURCE | CAMERA | LOCATION | PIGMENT | PLANE | SPHERE | LOOK_AT | COLOR | TYPE_COLOR | OPEN_BRACKET | CLOSE_BRACKET | LESS_THAN | GREATER_THAN | COMMA | DIGIT | NEWLINE | WHITESPACE )
+        int alt5=26;
         alt5 = dfa5.predict(input);
         switch (alt5) {
             case 1 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:10: T__21
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:10: T__23
                 {
-                mT__21(); 
+                mT__23();
 
                 }
                 break;
             case 2 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:16: T__22
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:16: T__24
                 {
-                mT__22(); 
+                mT__24();
 
                 }
                 break;
             case 3 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:22: LIGHTSOURCE
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:22: T__25
                 {
-                mLIGHTSOURCE(); 
+                mT__25();
 
                 }
                 break;
             case 4 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:34: CAMERA
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:28: T__26
                 {
-                mCAMERA(); 
+                mT__26();
 
                 }
                 break;
             case 5 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:41: LOCATION
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:34: T__27
                 {
-                mLOCATION(); 
+                mT__27();
 
                 }
                 break;
             case 6 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:50: PIGMENT
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:40: T__28
                 {
-                mPIGMENT(); 
+                mT__28();
 
                 }
                 break;
             case 7 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:58: PLANE
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:46: T__29
                 {
-                mPLANE(); 
+                mT__29();
 
                 }
                 break;
             case 8 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:64: SPHERE
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:52: AMBIENTLIGHT
                 {
-                mSPHERE(); 
+                mAMBIENTLIGHT();
 
                 }
                 break;
             case 9 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:71: LOOK_AT
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:65: GLOBAL
                 {
-                mLOOK_AT(); 
+                mGLOBAL();
 
                 }
                 break;
             case 10 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:79: COLOR
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:72: LIGHTSOURCE
                 {
-                mCOLOR(); 
+                mLIGHTSOURCE();
 
                 }
                 break;
             case 11 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:85: TYPE_COLOR
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:84: CAMERA
                 {
-                mTYPE_COLOR(); 
+                mCAMERA();
 
                 }
                 break;
             case 12 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:96: OPEN_BRACKET
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:91: LOCATION
                 {
-                mOPEN_BRACKET(); 
+                mLOCATION();
 
                 }
                 break;
             case 13 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:109: CLOSE_BRACKET
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:100: PIGMENT
                 {
-                mCLOSE_BRACKET(); 
+                mPIGMENT();
 
                 }
                 break;
             case 14 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:123: LESS_THAN
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:108: PLANE
                 {
-                mLESS_THAN(); 
+                mPLANE();
 
                 }
                 break;
             case 15 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:133: GREATER_THAN
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:114: SPHERE
                 {
-                mGREATER_THAN(); 
+                mSPHERE();
 
                 }
                 break;
             case 16 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:146: COMMA
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:121: LOOK_AT
                 {
-                mCOMMA(); 
+                mLOOK_AT();
 
                 }
                 break;
             case 17 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:152: DIGIT
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:129: COLOR
                 {
-                mDIGIT(); 
+                mCOLOR();
 
                 }
                 break;
             case 18 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:158: NEWLINE
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:135: TYPE_COLOR
                 {
-                mNEWLINE(); 
+                mTYPE_COLOR();
 
                 }
                 break;
             case 19 :
-                // D:\\Pamela\\Quinto semestre\\Computaci�n  Gr�fica\\Practica Final\\Compilador RayTracer\\RayTracer.g:1:166: WHITESPACE
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:146: OPEN_BRACKET
                 {
-                mWHITESPACE(); 
+                mOPEN_BRACKET();
+
+                }
+                break;
+            case 20 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:159: CLOSE_BRACKET
+                {
+                mCLOSE_BRACKET();
+
+                }
+                break;
+            case 21 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:173: LESS_THAN
+                {
+                mLESS_THAN();
+
+                }
+                break;
+            case 22 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:183: GREATER_THAN
+                {
+                mGREATER_THAN();
+
+                }
+                break;
+            case 23 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:196: COMMA
+                {
+                mCOMMA();
+
+                }
+                break;
+            case 24 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:202: DIGIT
+                {
+                mDIGIT();
+
+                }
+                break;
+            case 25 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:208: NEWLINE
+                {
+                mNEWLINE();
+
+                }
+                break;
+            case 26 :
+                // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:1:216: WHITESPACE
+                {
+                mWHITESPACE();
 
                 }
                 break;
@@ -733,44 +938,66 @@ public class RayTracerLexer extends Lexer {
 
     protected DFA5 dfa5 = new DFA5(this);
     static final String DFA5_eotS =
-        "\30\uffff";
+        "\45\uffff\1\47\2\uffff";
     static final String DFA5_eofS =
-        "\30\uffff";
+        "\50\uffff";
     static final String DFA5_minS =
-        "\1\11\2\uffff\1\151\1\141\1\151\13\uffff\1\143\6\uffff";
+        "\1\11\3\uffff\1\155\1\uffff\1\160\2\uffff\1\151\1\141\1\151\11"+
+        "\uffff\1\142\1\145\1\uffff\1\143\4\uffff\1\151\4\uffff\1\145\1\156"+
+        "\1\164\1\137\2\uffff";
     static final String DFA5_maxS =
-        "\1\175\2\uffff\2\157\1\154\13\uffff\1\157\6\uffff";
+        "\1\175\3\uffff\1\155\1\uffff\1\160\2\uffff\2\157\1\154\11\uffff"+
+        "\1\142\1\150\1\uffff\1\157\4\uffff\1\151\4\uffff\1\145\1\156\1\164"+
+        "\1\137\2\uffff";
     static final String DFA5_acceptS =
-        "\1\uffff\1\1\1\2\3\uffff\1\10\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-        "\1\22\1\23\1\3\1\uffff\1\4\1\12\1\6\1\7\1\5\1\11";
+        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\uffff\1\7\1\11\3\uffff\1\22"+
+        "\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\2\uffff\1\12\1\uffff\1"+
+        "\13\1\21\1\15\1\16\1\uffff\1\6\1\17\1\14\1\20\4\uffff\1\10\1\4";
     static final String DFA5_specialS =
-        "\30\uffff}>";
+        "\50\uffff}>";
     static final String[] DFA5_transitionS = {
-            "\1\17\1\16\2\uffff\1\16\22\uffff\1\17\13\uffff\1\14\1\1\1\2"+
-            "\1\uffff\12\15\2\uffff\1\12\1\uffff\1\13\3\uffff\1\7\4\uffff"+
-            "\1\7\12\uffff\1\7\4\uffff\1\7\1\uffff\1\7\11\uffff\1\4\10\uffff"+
-            "\1\3\3\uffff\1\5\2\uffff\1\6\7\uffff\1\10\1\uffff\1\11",
-            "",
-            "",
-            "\1\20\5\uffff\1\21",
-            "\1\22\15\uffff\1\23",
-            "\1\24\2\uffff\1\25",
+            "\1\24\1\23\2\uffff\1\23\22\uffff\1\24\13\uffff\1\21\1\1\1\2"+
+            "\1\uffff\12\22\2\uffff\1\17\1\uffff\1\20\3\uffff\1\14\4\uffff"+
+            "\1\14\12\uffff\1\14\4\uffff\1\14\1\uffff\1\14\7\uffff\1\4\1"+
+            "\7\1\12\1\5\1\uffff\1\3\1\10\4\uffff\1\11\3\uffff\1\13\2\uffff"+
+            "\1\6\7\uffff\1\15\1\uffff\1\16",
             "",
             "",
             "",
+            "\1\25",
+            "",
+            "\1\26",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\26\13\uffff\1\27",
+            "\1\27\5\uffff\1\30",
+            "\1\31\15\uffff\1\32",
+            "\1\33\2\uffff\1\34",
             "",
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\35",
+            "\1\36\2\uffff\1\37",
+            "",
+            "\1\40\13\uffff\1\41",
+            "",
+            "",
+            "",
+            "",
+            "\1\42",
+            "",
+            "",
+            "",
+            "",
+            "\1\43",
+            "\1\44",
+            "\1\45",
+            "\1\46",
             "",
             ""
     };
@@ -805,9 +1032,9 @@ public class RayTracerLexer extends Lexer {
             this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__21 | T__22 | LIGHTSOURCE | CAMERA | LOCATION | PIGMENT | PLANE | SPHERE | LOOK_AT | COLOR | TYPE_COLOR | OPEN_BRACKET | CLOSE_BRACKET | LESS_THAN | GREATER_THAN | COMMA | DIGIT | NEWLINE | WHITESPACE );";
+            return "1:1: Tokens : ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | AMBIENTLIGHT | GLOBAL | LIGHTSOURCE | CAMERA | LOCATION | PIGMENT | PLANE | SPHERE | LOOK_AT | COLOR | TYPE_COLOR | OPEN_BRACKET | CLOSE_BRACKET | LESS_THAN | GREATER_THAN | COMMA | DIGIT | NEWLINE | WHITESPACE );";
         }
     }
- 
+
 
 }

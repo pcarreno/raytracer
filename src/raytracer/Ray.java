@@ -3,8 +3,8 @@ package raytracer;
 import javax.vecmath.*;
 
 public class Ray {
-	private Point3d origin = null;
-	private Vector3d direction = null;
+	private Point3d origin;
+	private Vector3d direction;
 	
 	public Ray() {
 		origin = new Point3d();

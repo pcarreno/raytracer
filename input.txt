@@ -1,17 +1,23 @@
+global_settings {ambient_light color Red}
 sphere { 
-  <0.2, 0.5, -0.5>, 
+  <-0.1, 0.1,-0.8>, 
   0.3
   pigment { 
-    color Blue 
-  } 
+    color Blue
+  }  
+  finish { ambient 0.1 diffuse 0.7 specular 0.5 brilliance 20} 
 }
 sphere { 
-  <0.5, 0.2, -0.8>, 
+  <-0.5, 0.1,-0.5>, 
   0.2
   pigment { 
-    color Red
-  } 
+    color Green
+  }  
+  finish { ambient 0.1 diffuse 0.7 specular 0.5 brilliance 10} 
 }
+light_source { 
+  <1, 1, -1> color White
+} 
 
 
 
