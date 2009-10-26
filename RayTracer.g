@@ -46,8 +46,8 @@ sphere	:	{typeObject=typeSphere;
 		  double [] temp = new double [4];
 		  temp [0]=0.1;
 		  temp [1]=0.7;
-		  temp [2]= 0.1;
-		  temp [3] = 10.0;
+		  temp [2]= 0.7;
+		  temp [3] = 20.0;
 		  spheres.add(temp);}
 		};
 plane 	:	{typeObject=typePlane;
@@ -135,7 +135,7 @@ ambient_light	:{typeObject=typeAmbientalL;}
 		GLOBAL OPEN_BRACKET AMBIENTLIGHT COLOR color CLOSE_BRACKET ;												// Para determinar el color														
 constantLights
 	:{flag=true;} 
-	'finish' OPEN_BRACKET 'ambient' num0=number 'diffuse' num1=number 'specular' num2=number 'brilliance' num3=number CLOSE_BRACKET
+	'finish' OPEN_BRACKET 'ambient' num0=number 'diffuse' num1=number 'phong' num2=number 'phong_size' num3=number CLOSE_BRACKET
 	  {
 	   double [] temp = new double [4];
 	   temp [0]=Double.valueOf($num0.text).doubleValue();

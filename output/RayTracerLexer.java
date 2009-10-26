@@ -1,4 +1,4 @@
-// $ANTLR 3.1.2 D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g 2009-10-18 12:02:39
+// $ANTLR 3.1.2 D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g 2009-10-19 19:26:18
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -155,10 +155,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:8:7: ( 'specular' )
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:8:9: 'specular'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:8:7: ( 'phong' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:8:9: 'phong'
             {
-            match("specular"); 
+            match("phong"); 
 
 
             }
@@ -176,10 +176,10 @@ public class RayTracerLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:9:7: ( 'brilliance' )
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:9:9: 'brilliance'
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:9:7: ( 'phong_size' )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:9:9: 'phong_size'
             {
-            match("brilliance"); 
+            match("phong_size"); 
 
 
             }
@@ -934,42 +934,39 @@ public class RayTracerLexer extends Lexer {
 
     protected DFA5 dfa5 = new DFA5(this);
     static final String DFA5_eotS =
-        "\45\uffff\1\47\2\uffff";
+        "\43\uffff\1\46\3\uffff\1\51\2\uffff";
     static final String DFA5_eofS =
-        "\50\uffff";
+        "\52\uffff";
     static final String DFA5_minS =
-        "\1\11\3\uffff\1\155\1\uffff\1\160\2\uffff\1\151\1\141\1\151\11"+
-        "\uffff\1\142\1\145\1\uffff\1\143\4\uffff\1\151\4\uffff\1\145\1\156"+
-        "\1\164\1\137\2\uffff";
+        "\1\11\3\uffff\1\155\1\uffff\1\150\1\uffff\1\151\1\141\12\uffff"+
+        "\1\142\1\157\3\uffff\1\143\2\uffff\1\151\1\156\2\uffff\1\145\1\147"+
+        "\1\156\1\137\1\164\2\uffff\1\137\2\uffff";
     static final String DFA5_maxS =
-        "\1\175\3\uffff\1\155\1\uffff\1\160\2\uffff\2\157\1\154\11\uffff"+
-        "\1\142\1\150\1\uffff\1\157\4\uffff\1\151\4\uffff\1\145\1\156\1\164"+
-        "\1\137\2\uffff";
+        "\1\175\3\uffff\1\155\1\uffff\1\154\1\uffff\2\157\12\uffff\1\142"+
+        "\1\157\3\uffff\1\157\2\uffff\1\151\1\156\2\uffff\1\145\1\147\1\156"+
+        "\1\137\1\164\2\uffff\1\137\2\uffff";
     static final String DFA5_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\uffff\1\7\1\11\3\uffff\1\22"+
-        "\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\2\uffff\1\12\1\uffff\1"+
-        "\13\1\21\1\15\1\16\1\uffff\1\6\1\17\1\14\1\20\4\uffff\1\10\1\4";
+        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\uffff\1\11\2\uffff\1\17\1\22"+
+        "\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32\2\uffff\1\15\1\16\1\12"+
+        "\1\uffff\1\13\1\21\2\uffff\1\14\1\20\5\uffff\1\7\1\6\1\uffff\1\10"+
+        "\1\4";
     static final String DFA5_specialS =
-        "\50\uffff}>";
+        "\52\uffff}>";
     static final String[] DFA5_transitionS = {
-            "\1\24\1\23\2\uffff\1\23\22\uffff\1\24\13\uffff\1\21\1\1\1\2"+
-            "\1\uffff\12\22\2\uffff\1\17\1\uffff\1\20\3\uffff\1\14\4\uffff"+
-            "\1\14\12\uffff\1\14\4\uffff\1\14\1\uffff\1\14\7\uffff\1\4\1"+
-            "\7\1\12\1\5\1\uffff\1\3\1\10\4\uffff\1\11\3\uffff\1\13\2\uffff"+
-            "\1\6\7\uffff\1\15\1\uffff\1\16",
+            "\1\23\1\22\2\uffff\1\22\22\uffff\1\23\13\uffff\1\20\1\1\1\2"+
+            "\1\uffff\12\21\2\uffff\1\16\1\uffff\1\17\3\uffff\1\13\4\uffff"+
+            "\1\13\12\uffff\1\13\4\uffff\1\13\1\uffff\1\13\7\uffff\1\4\1"+
+            "\uffff\1\11\1\5\1\uffff\1\3\1\7\4\uffff\1\10\3\uffff\1\6\2\uffff"+
+            "\1\12\7\uffff\1\14\1\uffff\1\15",
             "",
             "",
             "",
-            "\1\25",
+            "\1\24",
             "",
-            "\1\26",
+            "\1\25\1\26\2\uffff\1\27",
             "",
-            "",
-            "\1\27\5\uffff\1\30",
-            "\1\31\15\uffff\1\32",
-            "\1\33\2\uffff\1\34",
-            "",
-            "",
+            "\1\30\5\uffff\1\31",
+            "\1\32\15\uffff\1\33",
             "",
             "",
             "",
@@ -977,23 +974,29 @@ public class RayTracerLexer extends Lexer {
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "\1\34",
             "\1\35",
-            "\1\36\2\uffff\1\37",
-            "",
-            "\1\40\13\uffff\1\41",
             "",
             "",
+            "",
+            "\1\36\13\uffff\1\37",
+            "",
+            "",
+            "\1\40",
+            "\1\41",
             "",
             "",
             "\1\42",
-            "",
-            "",
-            "",
-            "",
             "\1\43",
             "\1\44",
             "\1\45",
-            "\1\46",
+            "\1\47",
+            "",
+            "",
+            "\1\50",
             "",
             ""
     };

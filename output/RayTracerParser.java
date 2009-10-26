@@ -1,4 +1,4 @@
-// $ANTLR 3.1.2 D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g 2009-10-18 12:02:39
+// $ANTLR 3.1.2 D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g 2009-10-19 19:26:18
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class RayTracerParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "LIGHTSOURCE", "OPEN_BRACKET", "COLOR", "CLOSE_BRACKET", "CAMERA", "LOCATION", "LOOK_AT", "SPHERE", "COMMA", "PLANE", "PIGMENT", "LESS_THAN", "GREATER_THAN", "DIGIT", "TYPE_COLOR", "GLOBAL", "AMBIENTLIGHT", "NEWLINE", "WHITESPACE", "'-'", "'.'", "'finish'", "'ambient'", "'diffuse'", "'specular'", "'brilliance'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "LIGHTSOURCE", "OPEN_BRACKET", "COLOR", "CLOSE_BRACKET", "CAMERA", "LOCATION", "LOOK_AT", "SPHERE", "COMMA", "PLANE", "PIGMENT", "LESS_THAN", "GREATER_THAN", "DIGIT", "TYPE_COLOR", "GLOBAL", "AMBIENTLIGHT", "NEWLINE", "WHITESPACE", "'-'", "'.'", "'finish'", "'ambient'", "'diffuse'", "'phong'", "'phong_size'"
     };
     public static final int T__29=29;
     public static final int T__28=28;
@@ -395,8 +395,8 @@ public class RayTracerParser extends Parser {
             		  double [] temp = new double [4];
             		  temp [0]=0.1;
             		  temp [1]=0.7;
-            		  temp [2]= 0.1;
-            		  temp [3] = 10.0;
+            		  temp [2]= 0.7;
+            		  temp [3] = 20.0;
             		  spheres.add(temp);}
             		
 
@@ -801,7 +801,7 @@ public class RayTracerParser extends Parser {
 
 
     // $ANTLR start "constantLights"
-    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:136:1: constantLights : 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'specular' num2= number 'brilliance' num3= number CLOSE_BRACKET ;
+    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:136:1: constantLights : 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'phong' num2= number 'phong_size' num3= number CLOSE_BRACKET ;
     public final void constantLights() throws RecognitionException {
         RayTracerParser.number_return num0 = null;
 
@@ -813,8 +813,8 @@ public class RayTracerParser extends Parser {
 
 
         try {
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:2: ( 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'specular' num2= number 'brilliance' num3= number CLOSE_BRACKET )
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:3: 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'specular' num2= number 'brilliance' num3= number CLOSE_BRACKET
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:2: ( 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'phong' num2= number 'phong_size' num3= number CLOSE_BRACKET )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:3: 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'phong' num2= number 'phong_size' num3= number CLOSE_BRACKET
             {
             flag=true;
             match(input,25,FOLLOW_25_in_constantLights314); 

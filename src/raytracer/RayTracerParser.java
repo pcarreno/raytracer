@@ -13,7 +13,7 @@ import java.util.Vector;
 
 public class RayTracerParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "LIGHTSOURCE", "OPEN_BRACKET", "COLOR", "CLOSE_BRACKET", "CAMERA", "LOCATION", "LOOK_AT", "SPHERE", "COMMA", "PLANE", "PIGMENT", "LESS_THAN", "GREATER_THAN", "DIGIT", "TYPE_COLOR", "GLOBAL", "AMBIENTLIGHT", "NEWLINE", "WHITESPACE", "'-'", "'.'", "'finish'", "'ambient'", "'diffuse'", "'specular'", "'brilliance'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "LIGHTSOURCE", "OPEN_BRACKET", "COLOR", "CLOSE_BRACKET", "CAMERA", "LOCATION", "LOOK_AT", "SPHERE", "COMMA", "PLANE", "PIGMENT", "LESS_THAN", "GREATER_THAN", "DIGIT", "TYPE_COLOR", "GLOBAL", "AMBIENTLIGHT", "NEWLINE", "WHITESPACE", "'-'", "'.'", "'finish'", "'ambient'", "'diffuse'", "'phong'", "'phong_size'"
     };
     public static final int T__29=29;
     public static final int T__28=28;
@@ -57,7 +57,9 @@ public class RayTracerParser extends Parser {
 
 
     public String[] getTokenNames() { return RayTracerParser.tokenNames; }
-    public String getGrammarFileName() { return "RayTracer.g"; }
+    public String getGrammarFileName() { return "D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g"; }
+
+
 
     	public Vector <double[]> spheres = new Vector <double []>();
     	public double [] ambientLight = new double [3];
@@ -74,7 +76,6 @@ public class RayTracerParser extends Parser {
     	public static final int typeLigth = 4;
     	public static final int typeAmbientalL=5;
 
-
         Vector getVector(){
         return spheres;}
 
@@ -87,7 +88,8 @@ public class RayTracerParser extends Parser {
             return ambientLight;
         }
 
-     public final void scene() throws RecognitionException {
+     // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:21:1: scene : ambient_light ( object )+ ;
+    public final void scene() throws RecognitionException {
         try {
             // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:21:7: ( ambient_light ( object )+ )
             // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:21:9: ambient_light ( object )+
@@ -408,8 +410,8 @@ public class RayTracerParser extends Parser {
             		  double [] temp = new double [4];
             		  temp [0]=0.1;
             		  temp [1]=0.7;
-            		  temp [2]= 0.1;
-            		  temp [3] = 10.0;
+            		  temp [2]= 0.7;
+            		  temp [3] = 20.0;
             		  spheres.add(temp);}
 
 
@@ -543,10 +545,8 @@ public class RayTracerParser extends Parser {
             		      break;
             		   case 2:
             		    spheres.add(color1);
-            		   case 3:
-            		    break;
-            		   case 4:
-            		    break;}
+                       default:
+                        break;}
 
             }
 
@@ -615,8 +615,8 @@ public class RayTracerParser extends Parser {
             			case 4:
             			 ligths.add(temp);
             			 break;
-            			case 5:
-             			 break;}
+                        default:
+                         break;}
 
 
             }
@@ -748,9 +748,11 @@ public class RayTracerParser extends Parser {
             		} else if (color.equals("Blue"))
             			 {color1 [0] = 0.0; color1 [1] =0.0; color1 [2] = 1.0;
             		} else if (color.equals("Red"))														{  color1 [0] = 1.0; color1 [1] =0.0; color1 [2] = 0.0;											} else if (color.equals("Green"))
-            			{color1 [0] = 0.0; color1 [1] =1.0; color1 [2] = 0.0;
+            			{color1 [0] = 1.0; color1 [1] =0.0; color1 [2] = 0.0;
             		} else if (color.equals("White"))
             			{color1 [0] = 1.0; color1 [1] =1.0; color1 [2] = 1.0;}
+                     else if (color.equals("Green"))
+            			{color1 [0] = 0.0; color1 [1] =1.0; color1 [2] = 0.0;}
             		color = "";
             		switch (typeObject){
             		   case 4:
@@ -813,7 +815,7 @@ public class RayTracerParser extends Parser {
 
 
     // $ANTLR start "constantLights"
-    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:136:1: constantLights : 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'specular' num2= number 'brilliance' num3= number CLOSE_BRACKET ;
+    // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:136:1: constantLights : 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'phong' num2= number 'phong_size' num3= number CLOSE_BRACKET ;
     public final void constantLights() throws RecognitionException {
         RayTracerParser.number_return num0 = null;
 
@@ -825,8 +827,8 @@ public class RayTracerParser extends Parser {
 
 
         try {
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:2: ( 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'specular' num2= number 'brilliance' num3= number CLOSE_BRACKET )
-            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:3: 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'specular' num2= number 'brilliance' num3= number CLOSE_BRACKET
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:2: ( 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'phong' num2= number 'phong_size' num3= number CLOSE_BRACKET )
+            // D:\\Pamela\\Quinto semestre\\Computación  Gráfica\\RayTracer\\RayTracer.g:137:3: 'finish' OPEN_BRACKET 'ambient' num0= number 'diffuse' num1= number 'phong' num2= number 'phong_size' num3= number CLOSE_BRACKET
             {
             flag=true;
             match(input,25,FOLLOW_25_in_constantLights314);
@@ -869,12 +871,8 @@ public class RayTracerParser extends Parser {
             	    case 2:
             	      spheres.add(temp);
             	      break;
-            	    case 3:
-            	      break;
-            	    case 4:
-            	      break;
-            	    case 5:
-            	      break;
+                    default:
+                       break;
             	    }
 
 

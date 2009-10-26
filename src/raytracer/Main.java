@@ -16,11 +16,11 @@ import javax.vecmath.*;
 public class Main {
 
     int size = 300;
-	Group group = new Group();;
-	Image image = null;
-	Camera	camera = null;
+    Group group = new Group();;
+    Image image = null;
+    Camera camera = null;
     Light ambiental = new Light();
-    Light point = new Light();;
+    Light point = new Light();
     public static final int pointLight=1;
     public static final int ambientLight=2;
 
@@ -49,7 +49,7 @@ public class Main {
             temp3=temp.get(i+2);
             temp4=temp.get(i+3);
             Sphere s1 = new Sphere(new Point3d(temp0[0], temp0[1], temp0[2]),
-            temp2[0], new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]), temp4[0], temp4[1], temp4[2], temp4[3]);
+            temp2[0], new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]), temp4[0], temp4[1], temp4[2], temp4[3], 1.5);
             group.add(s1);
         }
 	}
@@ -74,14 +74,14 @@ public class Main {
             m.image = new Image(m.size, m.size);
             m.camera = new OrtographicCamera(1d);
 
-
-		for (int x = 0; x < m.size; x++) {
+            Color3f temp=new Color3f();
+	for (int x = 0; x < m.size; x++) {
             double right=(x*ratio)-1;
 			for (int y =0; y <m.size; y++) {
 				double up= (y*ratio)-1;
                Ray r= m.camera.generateRay(new Point2d(right,up));
                Hit h=new Hit();
-               Range range = new Range();
+               Range range = new Range(0.0001, Double.MAX_VALUE);
                m.group.intersect(r, h, range, m.ambiental, m.point);
                m.image.setColor(x, y, h.getColor());
               // m.image.setColor(x, y, m.group.iluminate(m.ambiental, m.point, h, r));

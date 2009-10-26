@@ -5,6 +5,9 @@ import javax.vecmath.*;
 public class Hit {
 	private double t = 0d;
 	private Color3f color = null;
+        private int indexObject=0;
+
+        
 	
 	public Hit() {
 		// ToDo: initialize the value of t and
@@ -12,12 +15,14 @@ public class Hit {
 		// ...
         t=Double.MAX_VALUE;
         color = new Color3f(0.f, 0.f, 0.f);
+        indexObject=0;
 	}
 	
-	public Hit(double t, Color3f color) {
+	public Hit(double t, Color3f color, int index) {
 		super();
 		this.t = t;
 		this.color = color;
+                indexObject=index;
 	}
 
 	public double getT() {
@@ -35,5 +40,15 @@ public class Hit {
 	public void setColor(Color3f color) {
 		this.color = color;
 	}
+        
+        public void setIndex(int i)
+        {
+            indexObject=i;
+        }
+        
+        public int getIndex()
+        {
+            return indexObject;
+        }
 	
 }
