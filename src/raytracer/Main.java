@@ -27,7 +27,6 @@ public class Main {
 
     	public void createScene(Vector <double []> temp, Vector <double[]> ligths, double[] ambientL) {
 		// Create a red sphere
-         System.out.println(ligths.size());
          ambiental = new Light(new Color3f((float)ambientL[0],(float)ambientL[1], (float)ambientL[2]), ambientLight);
          for(int j=0; j<ligths.size(); j+=2)
          {
@@ -35,21 +34,24 @@ public class Main {
          double [] temp1=new double [3];
          temp0=ligths.get(j);
          temp1=ligths.get(j+1);
-         System.out.println(temp0[0]);
          point=new Light(new Point3d(temp0[0], temp0[1], temp0[2]), new Color3f((float)temp1[0], (float)temp1[1], 
                  (float)temp1[2]), pointLight);       
          }
          for (int i=0; i<temp.size(); i+=4){
            double [] temp0 = new double [3];
-           double [] temp2 = new double [1];
+           double [] temp2 = new double [2];
            double [] temp3 = new double [3];
            double [] temp4= new double [4];
+            //Posición
             temp0=temp.get(i);
-            temp2=temp.get(i+1);
-            temp3=temp.get(i+2);
-            temp4=temp.get(i+3);
+            //Color
+            temp3=temp.get(i+1);
+            //Factores iluminacion local
+            temp4=temp.get(i+2);
+            //Radio y factor de reflexion
+            temp2=temp.get(i+3);
             Sphere s1 = new Sphere(new Point3d(temp0[0], temp0[1], temp0[2]),
-            temp2[0], new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]), temp4[0], temp4[1], temp4[2], temp4[3], 1.5);
+            temp2[0], new Color3f((float)temp3[0], (float)temp3[1], (float)temp3[2]), temp4[0], temp4[1], temp4[2], temp4[3], temp2[1]);
             group.add(s1);
         }
 	}
@@ -82,7 +84,8 @@ public class Main {
                Ray r= m.camera.generateRay(new Point2d(right,up));
                Hit h=new Hit();
                Range range = new Range(0.0001, Double.MAX_VALUE);
-               m.group.intersect(r, h, range, m.ambiental, m.point);
+               h.setColor(m.group.iluminate(r, h, range, m.ambiental, m.point));
+               m.group.cleanCounter(0);
                m.image.setColor(x, y, h.getColor());
               // m.image.setColor(x, y, m.group.iluminate(m.ambiental, m.point, h, r));
               }

@@ -14,7 +14,7 @@ public class Hit {
 		// the color
 		// ...
         t=Double.MAX_VALUE;
-        color = new Color3f(0.f, 0.f, 0.f);
+        color = new Color3f(0.0f, 0.0f, 0.0f);
         indexObject=0;
 	}
 	

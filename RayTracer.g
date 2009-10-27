@@ -35,14 +35,16 @@ sphere	:	{typeObject=typeSphere;
 		flag=false;}
 		SPHERE OPEN_BRACKET coordenate3D
 		/*{sphere+= $coordenate3D.text+ ", ";}*/
-		COMMA number
+		COMMA num0=number
 		{
-		double [] tempRadio= new double [1];
-		tempRadio [0] = Double.valueOf($number.text).doubleValue();
+		double [] tempRadio= new double [2];
+		tempRadio [0] = Double.valueOf($num0.text).doubleValue();
+		}
+		pigment 'finish' OPEN_BRACKET (constantLights)? 'reflection' OPEN_BRACKET num1=number
+		CLOSE_BRACKET CLOSE_BRACKET CLOSE_BRACKET
+		{tempRadio[1]=Double.valueOf($num1.text).doubleValue();
 		spheres.add (tempRadio);
-		/*sphere+= $number.text + ", ";*/}
-		pigment (constantLights)? CLOSE_BRACKET
-		{if(!flag){
+		if(!flag){
 		  double [] temp = new double [4];
 		  temp [0]=0.1;
 		  temp [1]=0.7;
@@ -86,8 +88,9 @@ pigment	:	PIGMENT OPEN_BRACKET COLOR color CLOSE_BRACKET
 		   case 3:
 		    break;
 		   case 4:
-		    ligths.add(color1);
-		    break;} };
+		    break;
+		   default:
+		   break;} };
 coordenate3D
 	:	LESS_THAN num1=number COMMA num2=number COMMA num3=number GREATER_THAN
 		{ double [] temp = new double [3];
@@ -135,7 +138,7 @@ ambient_light	:{typeObject=typeAmbientalL;}
 		GLOBAL OPEN_BRACKET AMBIENTLIGHT COLOR color CLOSE_BRACKET ;												// Para determinar el color														
 constantLights
 	:{flag=true;} 
-	'finish' OPEN_BRACKET 'ambient' num0=number 'diffuse' num1=number 'phong' num2=number 'phong_size' num3=number CLOSE_BRACKET
+	 'ambient' num0=number 'diffuse' num1=number 'phong' num2=number 'phong_size' num3=number 
 	  {
 	   double [] temp = new double [4];
 	   temp [0]=Double.valueOf($num0.text).doubleValue();

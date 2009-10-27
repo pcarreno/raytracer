@@ -23,11 +23,11 @@ public class Sphere extends Object3D {
 		this.center = center;
 		this.radius = radius;
 		this.color  = color;
-                this.ambient=ambient;
-                this.diffuse=diffuse;
-                this.specular=specular;
-                this.brilliance=brilliance;
-                this.reflection=reflection;
+        this.ambient=ambient;
+        this.diffuse=diffuse;
+        this.specular=specular;
+        this.brilliance=brilliance;
+        this.reflection=reflection;
 	}
 
 	boolean intersect(Ray r, Hit h, Range range, Light ambiental, Light point) {
@@ -46,10 +46,10 @@ public class Sphere extends Object3D {
            double firstT=(-Bq-Math.sqrt(discriminant))/(2*Aq);
            if(firstT>range.getMinT() && firstT<h.getT())
                {
-                   h.setColor(this.color);
                    h.setT(firstT);
+                   retVal=true;
                }
-           retVal=true;
+
         }
         return retVal;
     }
