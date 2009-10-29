@@ -43,14 +43,18 @@ public class Sphere extends Object3D {
         // necesita el primer valor que es el de la primera intersección
         if (discriminant >=0)
         {
-           double firstT=(-Bq-Math.sqrt(discriminant))/(2*Aq);
-           if(firstT>range.getMinT() && firstT<h.getT())
+          double firstT=(-Bq-Math.sqrt(discriminant))/(2*Aq);
+        //  if(range.getMinT()<firstT)
+          //{
+          if((firstT>=range.getMinT()+0.00000001)&& (firstT<h.getT()))
+            // if(firstT<h.getT())
                {
                    h.setT(firstT);
                    retVal=true;
                }
+          }
 
-        }
+       // }
         return retVal;
     }
 

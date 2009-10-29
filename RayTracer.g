@@ -36,13 +36,12 @@ sphere	:	{typeObject=typeSphere;
 		SPHERE OPEN_BRACKET coordenate3D
 		/*{sphere+= $coordenate3D.text+ ", ";}*/
 		COMMA num0=number
+		pigment 'finish' OPEN_BRACKET (constantLights)? 'reflection' OPEN_BRACKET num1=number
+		CLOSE_BRACKET CLOSE_BRACKET CLOSE_BRACKET
 		{
 		double [] tempRadio= new double [2];
 		tempRadio [0] = Double.valueOf($num0.text).doubleValue();
-		}
-		pigment 'finish' OPEN_BRACKET (constantLights)? 'reflection' OPEN_BRACKET num1=number
-		CLOSE_BRACKET CLOSE_BRACKET CLOSE_BRACKET
-		{tempRadio[1]=Double.valueOf($num1.text).doubleValue();
+		tempRadio[1]=Double.valueOf($num1.text).doubleValue();
 		spheres.add (tempRadio);
 		if(!flag){
 		  double [] temp = new double [4];

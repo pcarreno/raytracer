@@ -36,8 +36,8 @@ public class Ray {
     Point3d getIntersectionPoint(double t)
     {
         double x=this.getOrigin().x+this.getDirection().x*t;
-        double y=this.getOrigin().y+this.getDirection().y*t;;
-        double z=this.getOrigin().z+this.getDirection().z*t;;
+        double y=this.getOrigin().y+this.getDirection().y*t;
+        double z=this.getOrigin().z+this.getDirection().z*t;
         return (new Point3d(x,y,z));
     }
 	
